@@ -76,7 +76,8 @@
   "environment": {
     "FB_BASEURL": "/filebrowser",
     "PGID": "0",
-    "PUID": "0"
+    "PUID": "0",
+    "PACKAGES": "curlftpfs bind-tools nginx"
   },
   "image": "ghcr.io/alexbelgium/filebrowser-{arch}",
   "ingress": true,
@@ -122,10 +123,17 @@
     "keyfile": "str",
     "localdisks": "str?",
     "networkdisks": "str?",
-    "ssl": "bool"
+    "ssl": "bool",
+    "ftp_client": {
+      "username": "str",
+      "password": "str",
+      "root_path": "str",
+      "port": "int"
+    }
   },
   "slug": "filebrowser",
   "udev": true,
   "url": "https://github.com/alexbelgium/hassio-addons",
   "version": "2.23.0_14"
 }
+
