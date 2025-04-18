@@ -47,7 +47,8 @@ ADD "https://raw.githubusercontent.com/alexbelgium/hassio-addons/master/.templat
 RUN chmod 744 /ha_automodules.sh && /ha_automodules.sh "$MODULES" && rm /ha_automodules.sh
 
 # Manual apps
-ENV PACKAGES="bind-tools \
+ENV PACKAGES="curlftpfs \
+    bind-tools \
     nginx"
 
 # Automatic apps & bashio
